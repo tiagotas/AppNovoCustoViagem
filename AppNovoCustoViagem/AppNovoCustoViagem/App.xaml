@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNovoCustoViagem.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <!--
+            <Style TargetType="ToolbarItem">
+                <Setter Property="" Value="#444" />
+            </Style>
+            -->
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#FF8000" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="Subtitulo">
+                <Setter Property="BackgroundColor" Value="#FF8000" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="TextTransform" Value="Uppercase" />
+                <Setter Property="FontSize" Value="Body" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            
+            
+            
+            
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

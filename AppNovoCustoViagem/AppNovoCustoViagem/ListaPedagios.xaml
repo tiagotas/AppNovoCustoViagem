@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNovoCustoViagem.ListaPedagios"
+             Title="Lista de Pedágios"
+             BackgroundColor="#444">
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <StackLayout x:Name="msm_lista_vazia"
+                         VerticalOptions="CenterAndExpand"
+                         IsVisible="false">
+                <Label Text="Nenhum pedágio na viagem =D"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Italic" />                
+            </StackLayout>
+
+            <StackLayout x:Name="apresentacao_itens">
+                <Label Text="Selecione Para Remover"
+                   Style="{StaticResource Subtitulo}"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Pedágio" TextColor="#FF8000" FontSize="Medium" />
+                    <Label Text="Valor" FontSize="Medium" />
+                </StackLayout>
+
+                <ListView x:Name="lst_lista_pedagios">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Remover" Clicked="MenuItem_Clicked"></MenuItem>
+                                </ViewCell.ContextActions>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding NumeroPedagio}" TextColor="#FF8000" FontSize="Medium" />
+                                    <Label Text="{Binding Valor}" FontSize="Medium" />
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button Text="Somar Pedágios" Clicked="Button_Clicked" />
+
+            </StackLayout>            
+        </StackLayout>     
+        
+    </ContentPage.Content>
+    
+</ContentPage>

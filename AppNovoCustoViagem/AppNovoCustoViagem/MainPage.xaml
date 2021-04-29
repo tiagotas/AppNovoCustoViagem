@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNovoCustoViagem.MainPage"
+             Title="Custo de Viagem"
+             Background="#444">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lista de Pedágios" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="Origem:" />
+        <Entry x:Name="txt_origem" Grid.Row="0" Grid.Column="1" />
+
+        <Label Grid.Row="1" Grid.Column="0" Text="Destino:" />
+        <Entry x:Name="txt_destino" Grid.Row="1" Grid.Column="1" />
+
+        
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Consumo do Veículo"
+               Style="{StaticResource Subtitulo}" />
+
+        <Label Grid.Row="3" Grid.Column="0" Text="Distância:" />
+        <Entry x:Name="txt_distancia" Grid.Row="3" Grid.Column="1" Keyboard="Numeric" />
+
+        <Label Grid.Row="4" Grid.Column="0" Text="Consumo:" />
+        <Entry x:Name="txt_consumo" Grid.Row="4" Grid.Column="1" Keyboard="Numeric" />
+
+        <Label Grid.Row="5" Grid.Column="0" Text="Valor do Combustível:" />
+        <Entry x:Name="txt_valor_combustivel" Grid.Row="5" Grid.Column="1" Keyboard="Numeric" />
+
+
+        <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Valor do Pedágio"
+               Style="{StaticResource Subtitulo}" />
+
+        <Label Grid.Row="7" Grid.Column="0" Text="Valor:" />
+        <StackLayout Grid.Row="7" Grid.Column="1" Orientation="Horizontal">
+            <Entry x:Name="txt_valor_pedagio" Keyboard="Numeric" HorizontalOptions="FillAndExpand" />          
+            <Button Text="Add" Clicked="Button_Clicked" />
+        </StackLayout>
+
+       
+
+        <StackLayout Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" 
+                     Orientation="Horizontal" Padding="10"
+                     HorizontalOptions="CenterAndExpand">
+            <!-- <Button  Text="Ver Lista de Pedágios" /> -->
+            <Button Text="Calcular" Clicked="Button_Clicked_Calcular" />
+            <Button Text="Limpar" Clicked="Button_Clicked_Limpar" />
+        </StackLayout>
+
+    </Grid>
+
+    
+
+</ContentPage>
